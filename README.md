@@ -1,27 +1,186 @@
-# UniShipUI
+# UniShip - Shipping Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+UniShip is a modern, full-featured shipping management system built with Angular 17, designed to help businesses efficiently manage their shipping operations, track shipments, and handle customer relationships.
 
-## Development server
+![UniShip Logo](src/assets/logo.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+### Core Functionality
+- **Shipment Management**
+  - Create and track shipments
+  - Real-time shipment status updates
+  - Detailed shipment history
+  - Multi-point delivery tracking
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Customer Management**
+  - Customer profiles and history
+  - Address management
+  - Communication history
+  - Customer-specific shipping preferences
 
-## Build
+- **Branch Management**
+  - Branch network management
+  - Branch-specific operations
+  - Staff assignment
+  - Resource allocation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Vehicle Fleet Management**
+  - Vehicle tracking and assignment
+  - Maintenance scheduling
+  - Capacity management
+  - Route optimization
 
-## Running unit tests
+### Technical Features
+- Modern Angular 17 architecture with standalone components
+- Reactive state management using Angular Signals
+- Lazy-loaded feature modules for optimal performance
+- Responsive design for all device sizes
+- Real-time updates and notifications
+- Comprehensive error handling
+- Type-safe development with TypeScript
+- Clean and maintainable code structure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+### Prerequisites
+- Node.js (v18.0.0 or higher)
+- npm (v9.0.0 or higher)
+- Angular CLI (v17.0.0 or higher)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installation
 
-## Further help
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/uniship.git
+cd uniship
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+ng serve
+```
+
+4. Navigate to `http://localhost:4200` in your browser
+
+### Environment Setup
+
+Create an `environment.ts` file in the `src/environments` directory:
+
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'https://your-api-url'
+};
+```
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── core/                 # Core functionality
+│   │   ├── components/      # Shared components
+│   │   ├── guards/         # Route guards
+│   │   ├── interceptors/   # HTTP interceptors
+│   │   ├── interfaces/     # TypeScript interfaces
+│   │   └── services/       # Core services
+│   ├── features/           # Feature modules
+│   │   ├── auth/          # Authentication
+│   │   ├── shipments/     # Shipment management
+│   │   ├── customers/     # Customer management
+│   │   ├── branches/      # Branch management
+│   │   └── vehicles/      # Vehicle management
+│   └── shared/             # Shared functionality
+│       ├── components/     # Reusable components
+│       ├── pipes/         # Custom pipes
+│       └── directives/    # Custom directives
+├── assets/                 # Static assets
+└── environments/           # Environment configurations
+```
+
+## Key Components
+
+### Authentication
+- JWT-based authentication
+- Role-based access control
+- Secure route protection
+- Token refresh mechanism
+
+### Data Management
+- Reactive forms with validation
+- Real-time data updates
+- Optimistic UI updates
+- Error handling and recovery
+
+### UI Components
+- Modern, responsive design
+- Material Design influence
+- Custom form controls
+- Data tables with sorting and filtering
+- Loading indicators
+- Toast notifications
+
+## Development
+
+### Code Style
+- Follow Angular style guide
+- Use TypeScript strict mode
+- Implement proper error handling
+- Write comprehensive documentation
+- Maintain consistent naming conventions
+
+### Testing
+```bash
+# Run unit tests
+ng test
+
+# Run end-to-end tests
+ng e2e
+```
+
+### Building for Production
+```bash
+ng build --configuration production
+```
+
+## API Integration
+
+The application integrates with a RESTful API. Key endpoints include:
+
+- Authentication: `/auth/login`
+- Shipments: `/shipments`
+- Customers: `/customers`
+- Branches: `/branches`
+- Vehicles: `/vehicles`
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Support
+
+For support, email support@uniship.com or create an issue in the repository.
+
+## Acknowledgments
+
+- Angular team for the amazing framework
+- All contributors who have helped shape this project
+- The open-source community for their invaluable tools and libraries
+
+---
+
+© 2024 UniShip. All rights reserved.
